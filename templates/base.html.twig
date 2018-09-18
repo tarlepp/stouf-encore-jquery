@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <base href="{{ app.request.basePath }}">
+
         {% block stylesheets %}{% endblock %}
-        <link rel="stylesheet" href="{{ app.request.basePath ~ asset('build/app.css') }}">
+        <link rel="stylesheet" href="{{ app.request.baseUrl ~ asset('/build/app.css') }}">
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
-        <script src="{{ app.request.basePath ~ asset('build/app.js') }}"></script>
+        <script src="{{ app.request.baseUrl ~  asset('/build/app.js') }}"></script>
     </body>
 </html>
